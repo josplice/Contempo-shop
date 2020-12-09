@@ -18,14 +18,16 @@ import UserEditScreen from './screens/UserEditScreen'
 import ProductListScreen from './screens/ProductListScreen'
 import ProductEditScreen from './screens/ProductEditScreen'
 import OrderListScreen from './screens/OrderListScreen'
-
+// import ProductCarousel from './components/ProductCarousel'
 const App = () => {
 	return (
 		<Router>
 			<div>
 				<Header />
+
 				<main className='py-3'>
 					<Container>
+						{/* <ProductCarousel /> */}
 						<Route path='/order/:id' component={OrderScreen} />
 						<Route path='/shipping' component={ShippingScreen} />
 						<Route path='/placeorder' component={PlaceOrderScreen} />

@@ -2,10 +2,12 @@ import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 import colors from 'colors'
 import users from './data/users.js'
+import carousel from './data/carousel.js'
 import products from './data/products.js'
 import User from './models/userModel.js'
 import Product from './models/productModel.js'
 import Order from './models/orderModel.js'
+import Carousel from './models/carouselModel.js'
 import connectDB from './config/db.js'
 
 dotenv.config()
@@ -17,6 +19,9 @@ const importData = async () => {
 		await Order.deleteMany()
 		await Product.deleteMany()
 		await User.deleteMany()
+		await Carousel.deleteMany()
+
+		await Carousel.insertMany(carousel)
 
 		const createdUsers = await User.insertMany(users)
 
@@ -40,6 +45,7 @@ const destroyData = async () => {
 		await Order.deleteMany()
 		await Product.deleteMany()
 		await User.deleteMany()
+		await Carousel.deleteMany()
 
 		console.log('Data Destroyed!'.red.inverse)
 		process.exit()

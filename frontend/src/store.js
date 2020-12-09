@@ -28,6 +28,7 @@ import {
 	orderListMyReducer,
 	orderListReducer,
 } from './reducers/orderReducers'
+import { carouselListReducer } from './reducers/carouselReducers'
 
 const reducer = combineReducers({
 	productList: productListReducer,
@@ -39,6 +40,8 @@ const reducer = combineReducers({
 	productTopRated: productTopRatedReducer,
 
 	cart: cartReducer,
+
+	carouselList: carouselListReducer,
 
 	userLogin: userLoginReducer,
 	userRegister: userRegisterReducer,

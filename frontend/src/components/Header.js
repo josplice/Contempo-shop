@@ -18,10 +18,16 @@ const Headers = () => {
 	}
 	return (
 		<header>
-			<Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
+			<Navbar
+				className='navbar'
+				bg='light'
+				variant='light'
+				expand='lg'
+				collapseOnSelect
+			>
 				<Container>
 					<LinkContainer to='/'>
-						<Navbar.Brand>ProShoP</Navbar.Brand>
+						<Navbar.Brand>CONTEMPO</Navbar.Brand>
 					</LinkContainer>
 
 					<Navbar.Toggle aria-controls='basic-navbar-nav' />
